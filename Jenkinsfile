@@ -17,7 +17,7 @@ pipeline {
         script {
           // Check if Dockerfile exists
           if (fileExists('Dockerfile')) {
-            sh "docker build -t ${env.DOCKER_NAME} ."
+            sh "docker build -t ${env.DOCKER_IMAGE} ."
           }
           else {
             error "Dockerfile not found in the workspace. Please create one for your Python application."
